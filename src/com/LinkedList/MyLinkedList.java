@@ -3,25 +3,22 @@ package com.LinkedList;
 public class MyLinkedList {
 
 	public static void main(String[] args) {
-		LinkedList linkedList1=new LinkedList();
-		linkedList1.push(70);
-	    linkedList1.push(30);
-		linkedList1.push(56);
+		
+		LinkedList linkedList1 = new LinkedList();
+		linkedList1.append(56);
+		linkedList1.append(70);
+		
+		linkedList1.insertAfter(linkedList1.head,30);
+		
 		linkedList1.printList();
-		
-		System.out.println("\n");
-		
-		LinkedList linkedList2 = new LinkedList();
-		linkedList2.append(70);
-	    linkedList2.append(30);
-		linkedList2.append(56);
-		linkedList2.printList();
 
 	}
 
 }
 class LinkedList{
 	Node head;
+	Node last;
+	int size=0;
 	
 		class Node {
 		
@@ -38,7 +35,7 @@ class LinkedList{
 		Node newNode=new Node(data);
 	 	newNode.next=head;
 	 	head=newNode;	
-	     }
+	}
 	
 	 public void append(int data) {
 	    Node newNode = new Node(data);
@@ -47,12 +44,24 @@ class LinkedList{
 		return;
 	    }
 	 
-	    Node last= head;
+	    last= head;
 	    while(last.next != null) {
 		last = last.next;
 	    }
 	    last.next=newNode;
- }
+	    size++;
+	 }
+	 
+	public void insertAfter(Node prevNode, int data) {
+   	     if(prevNode==null) {
+   		 System.out.println("Previous node should not be null");
+   	     }
+   	 
+   	     Node newNode = new Node(data);
+   	     newNode.next = prevNode.next;
+   	     prevNode.next = newNode;
+    } 	
+	 
 	
 	public void printList() {
 		System.out.print("LinkedList:");
