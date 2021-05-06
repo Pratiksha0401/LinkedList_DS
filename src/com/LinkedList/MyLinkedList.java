@@ -8,9 +8,8 @@ public class MyLinkedList {
 		linkedList1.append(56);
 		linkedList1.append(30);
 		linkedList1.append(70);
-		linkedList1.append(40);
-		linkedList1.append(90);
-		linkedList1.searchElement(80);
+
+		linkedList1.insertAfter(linkedList1.head.next,40);
 		
 		linkedList1.printList();
 		
