@@ -10,6 +10,10 @@ public class MyQueue {
 		linkedList1.append(30);
 		linkedList1.append(70);
 		linkedList1.printList();
+		
+		System.out.print("\nQueue after Pop:\n");
+		linkedList1.pop();
+		linkedList1.printList();
 	}
 
 }
