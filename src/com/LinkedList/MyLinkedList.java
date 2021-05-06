@@ -6,11 +6,19 @@ public class MyLinkedList {
 		
 		LinkedList linkedList1 = new LinkedList();
 		linkedList1.append(56);
+		linkedList1.append(30);
 		linkedList1.append(70);
-		
-		linkedList1.insertAfter(linkedList1.head,30);
+		linkedList1.pop();
 		
 		linkedList1.printList();
+		
+		LinkedList linkedList2 = new LinkedList();
+		linkedList2.push(56);
+		linkedList2.push(30);
+		linkedList2.push(70);
+		linkedList2.pop();
+		
+		linkedList2.printList();
 
 	}
 
@@ -60,7 +68,15 @@ class LinkedList{
    	     Node newNode = new Node(data);
    	     newNode.next = prevNode.next;
    	     prevNode.next = newNode;
-    } 	
+    } 
+	
+	public void pop() {
+		if(head == null)
+			System.out.println("List is empty");
+		Node temp = head;
+		head = head.next;
+		temp.next = null;
+	}
 	 
 	
 	public void printList() {
