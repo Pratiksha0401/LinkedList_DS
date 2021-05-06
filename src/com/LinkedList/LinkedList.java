@@ -14,8 +14,8 @@ public class LinkedList {
 		  Node(int data){
 			this.data = data;
 			next =  null;
-		  }
-	   }
+		  } 
+	  }
 	
 	public void sortwhenPush(int data) {
 		Node newNode = new Node(data);
@@ -25,7 +25,6 @@ public class LinkedList {
 			return;
 			}
 			 
-		Node temp;
 		while(head != null) {
 			if(newNode.data<head.data) {
 				head=newNode;
@@ -72,6 +71,12 @@ public class LinkedList {
 		
 	}
 	
+	public void peak() {
+
+		System.out.println("Top Element : "+head.data);
+		
+	}
+	
 	public void popLast() {
 		if(head == null)
 			System.out.println("List is empty");
@@ -92,6 +97,16 @@ public class LinkedList {
 	 	
 	 	while(temp != null) {
 	 		System.out.print(temp.data+" -> ");
+	 		temp = temp.next;
+	 	     }
+	     }
+	
+	public void printStack() {
+		//System.out.print("LinkedList:");
+	 	Node temp=head;
+	 	
+	 	while(temp != null) {
+	 		System.out.print(temp.data+"\n");
 	 		temp = temp.next;
 	 	     }
 	     }
