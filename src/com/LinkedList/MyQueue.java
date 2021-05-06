@@ -6,9 +6,9 @@ public class MyQueue {
 		
 		System.out.print("Queue :\n");
 		LinkedList linkedList1 = new LinkedList();
-		linkedList1.push(70);
-		linkedList1.push(30);
-		linkedList1.push(56);
+		linkedList1.append(56);
+		linkedList1.append(30);
+		linkedList1.append(70);
 		linkedList1.printList();
 	}
 
