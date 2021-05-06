@@ -7,6 +7,12 @@ public class myStack {
 		linkedList1.push(70);
 		linkedList1.push(30);
 		linkedList1.push(56);
-		linkedList1.printList();
+		linkedList1.printStack();
+		
+		linkedList1.peak();
+		
+		System.out.print("Stack after Pop:\n");
+		linkedList1.pop();
+		linkedList1.printStack();
 		}
 }
