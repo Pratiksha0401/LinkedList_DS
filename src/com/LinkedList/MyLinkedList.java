@@ -8,17 +8,13 @@ public class MyLinkedList {
 		linkedList1.append(56);
 		linkedList1.append(30);
 		linkedList1.append(70);
-		linkedList1.popLast();
+		linkedList1.append(40);
+		linkedList1.append(90);
+		linkedList1.searchElement(80);
 		
 		linkedList1.printList();
 		
-		LinkedList linkedList2 = new LinkedList();
-		linkedList2.push(56);
-		linkedList2.push(30);
-		linkedList2.push(70);
-		linkedList2.popLast();
-		
-		linkedList2.printList();
+	
 
 	}
 
@@ -101,4 +97,25 @@ class LinkedList{
 	 		temp = temp.next;
 	 	     }
 	     }
+	
+	public void searchElement(int data)
+    {
+        Node n=head;
+        int count=1;
+        int flag=0;
+        while(n != null)
+        {	   
+		   if(n.data == data) {
+	       	flag=1;
+	       	break;
+	       }
+		   count =count+1;
+            n=n.next;   
+        }
+        
+        if(flag==1)
+        	System.out.println("Node with value "+data+" is found at position " +count);
+        else
+        	 System.out.println("Element is not present in the list");  
+    }
 }
