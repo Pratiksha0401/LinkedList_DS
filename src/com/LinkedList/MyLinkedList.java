@@ -9,7 +9,7 @@ public class MyLinkedList {
 		linkedList1.append(30);
 		linkedList1.append(70);
 
-		linkedList1.insertAfter(linkedList1.head.next,40);
+		linkedList1.pop();
 		
 		linkedList1.printList();
 		
@@ -68,9 +68,9 @@ class LinkedList{
 	public void pop() {
 		if(head == null)
 			System.out.println("List is empty");
-		Node temp = head;
+
 		head = head.next;
-		temp.next = null;
+		
 	}
 	
 	public void popLast() {
