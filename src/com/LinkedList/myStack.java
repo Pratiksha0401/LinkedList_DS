@@ -8,6 +8,10 @@ public class myStack {
 		stack.push(10);
 		stack.push(20);
 		stack.push(30);
+		
+		stack.peek();
+		System.out.print("Stack after pop:\n");
+		stack.pop();
 		stack.print();
 	}
 }
@@ -39,7 +43,23 @@ class Stack{
 		}
 	}
 
-	
+	public int pop(){
+		if(isEmpty()){
+			System.out.print("Stack underFlow");
+			return 0;
+		}else{
+			return stk[top--];
+		}
+	}
+
+	public void peek(){
+		if(isEmpty()){
+			System.out.print("Stack underFlow");
+			
+		}else{
+			System.out.print("Top Element :"+stk[top]+"\n");
+		}
+	}
 
 	public void print(){
 		System.out.print("Stack elements are: \n");
