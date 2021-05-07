@@ -8,9 +8,10 @@ public class MyQueue {
 		queue.enqueue(10);
 		queue.enqueue(20);
 		queue.enqueue(30);
-		
 		queue.print();
 		
+		queue.dequeue();
+		queue.print();
 	}
 }
 
@@ -23,7 +24,7 @@ class Queue {
 	public Queue(int capacity) {
 		this.capacity= capacity;
 		this.que=new int[capacity];
-		this.size = -1;
+		this.size = 0;
 		this.front= 0;
 		this.rear = -1;
 	}
@@ -47,12 +48,28 @@ class Queue {
 	}
 	
 	public void print() {
-		System.out.println("Queue element are:");
+		System.out.println("Queue elements are:");
 		
-		for(int ele=0; ele <=this.size; ele++) {
+		for(int ele=front; ele <=rear; ele++) {
 		   System.out.print(que[ele]+" ");
 		}
 		
 		System.out.println();
+	}
+	
+	public void dequeue() {
+		if(isEmpty()) {
+			System.out.println("Queue is Empty");
+			return;
+		}
+		else {
+			System.out.print(que[front]+": is removed\n");
+				front++;
+			size--;
+		}
+	}
+
+	public boolean isEmpty() {
+		return this.size==0;
 	}
 }	
