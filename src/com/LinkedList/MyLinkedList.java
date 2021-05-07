@@ -12,7 +12,7 @@ public class MyLinkedList {
 		System.out.println("LinkedList : ");
 		linkedList2.printList();
 		System.out.println("\nLinkedList : ");
-		linkedList2.deletebyData(40);
+		linkedList2.sortwhenPush(40);
 		linkedList2.printList();
 		
 //		LinkedList linkedList1 = new LinkedList();

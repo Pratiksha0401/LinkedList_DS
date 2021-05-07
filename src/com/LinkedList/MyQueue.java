@@ -14,6 +14,6 @@ public class MyQueue {
 		System.out.print("\nQueue after Pop:\n");
 		linkedList1.pop();
 		linkedList1.printList();
+		
 	}
-
 }

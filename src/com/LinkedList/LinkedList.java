@@ -19,17 +19,23 @@ public class LinkedList {
 	
 	public void sortwhenPush(int data) {
 		Node newNode = new Node(data);
-		if(head == null) {
+		Node temp=head;
+		if(temp == null) {
 			head= newNode;
-			last=newNode;
 			return;
 			}
-			 
-		while(head != null) {
-			if(newNode.data<head.data) {
-				head=newNode;
+		else {	 
+			while(temp != null) {
+				if(newNode.data < head.data) {
+					newNode=head;
+					temp=temp.next;
+					
+				}
+				else if(newNode.data > head.data){
+				newNode=head.next;
+				temp=temp.next;
+				}
 			}
-			head.next=newNode;
 		}
 	}	
 	   
