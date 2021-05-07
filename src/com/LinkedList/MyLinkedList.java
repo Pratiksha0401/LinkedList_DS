@@ -8,7 +8,11 @@ public class MyLinkedList {
 		linkedList2.push(56);
 		linkedList2.push(30);
 		linkedList2.push(70);
+		linkedList2.insertAfter(linkedList2.head.next,40);
 		System.out.println("LinkedList : ");
+		linkedList2.printList();
+		System.out.println("\nLinkedList : ");
+		linkedList2.deletebyData(40);
 		linkedList2.printList();
 		
 //		LinkedList linkedList1 = new LinkedList();

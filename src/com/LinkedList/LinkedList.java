@@ -72,6 +72,8 @@ public class LinkedList {
 	}
 	
 	public void peak() {
+		if(head == null)
+			System.out.println("List is empty");
 
 		System.out.println("Top Element : "+head.data);
 		
@@ -135,5 +137,29 @@ public class LinkedList {
         	System.out.println("Node with value "+data+" is found at position " +count);
         else
         	 System.out.println("Element is not present in the list");  
+    }
+	
+	 public void deletebyData(int data) {
+   	  Node temp=head;
+   	  Node prev=null;
+   	  
+   	  if (temp != null && temp.data == data) {
+   		  head=temp.next;
+   	
+   	  }
+   	  
+   	  while(temp != null && temp.data != data) {
+   		  prev = temp;
+   		  temp = temp.next;
+   	  }	  
+   	  
+   	  if (temp != null) {
+   		  prev.next =temp.next;
+   	  }
+   	  
+   	  if (temp == null) {
+   		  System.out.println(data+ " not found");
+   	  }
+   	  
     }
 }
