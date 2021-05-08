@@ -4,10 +4,21 @@ public class MyQueue {
 
 	public static void main(String[] args) {
 		
+		LinkedList linkedList1 = new LinkedList();
+		linkedList1.append(56);
+		linkedList1.append(30);
+		linkedList1.append(70);
+		linkedList1.printList();
+		
+		System.out.print("\nQueue after Pop:\n");
+		linkedList1.pop();
+		linkedList1.printList();
+		
+		
 		Queue queue = new Queue(10);
-		queue.enqueue(10);
-		queue.enqueue(20);
+		queue.enqueue(56);
 		queue.enqueue(30);
+		queue.enqueue(70);
 		queue.print();
 		
 		queue.dequeue();
@@ -48,7 +59,7 @@ class Queue {
 	}
 	
 	public void print() {
-		System.out.println("Queue elements are:");
+		System.out.println("\nQueue elements are:");
 		
 		for(int ele=front; ele <=rear; ele++) {
 		   System.out.print(que[ele]+" ");

@@ -170,6 +170,7 @@ public class LinkedList {
     }
 	 
 	 public void sortedList() {
+		
 		 Node current = head;
 	     Node index = null;
 	     int temp;
