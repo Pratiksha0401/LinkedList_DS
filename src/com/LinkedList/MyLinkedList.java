@@ -11,8 +11,9 @@ public class MyLinkedList {
 		linkedList2.insertAfter(linkedList2.head.next,40);
 		System.out.println("LinkedList : ");
 		linkedList2.printList();
-		System.out.println("\nLinkedList : ");
-		linkedList2.sortwhenPush(40);
+		
+		System.out.println("\n Sorted LinkedList : ");
+		linkedList2.sortedList();
 		linkedList2.printList();
 		
 //		LinkedList linkedList1 = new LinkedList();
